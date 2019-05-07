@@ -27,8 +27,8 @@ class Zoo():
         self.habitats = []
     
     def agregarHabitat(self):
-        nombreHabitat = input("Ingrese el nombre de habitat")
-        extencionHabitat = input("Ingrese la extencion del habitat")
+        nombreHabitat = input("Ingrese el nombre de habitat:")
+        extencionHabitat = input("Ingrese la extencion del habitat:")
         nuevoHabitat = Habitat(nombreHabitat, extencionHabitat)
         self.habitats.append(nuevoHabitat)                                    
 
@@ -47,7 +47,7 @@ while True:
     '3. Ver el Habitat\n' 
     '4. Ver el Animal\n'
     '5. Salir')  
-    eleccion = input('Seleccionar una opcion')
+    eleccion = input('Seleccionar una opcion:')
 
     if (eleccion == '1'):
         print('\n\t Creacion del Habitat \n')
