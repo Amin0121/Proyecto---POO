@@ -1,10 +1,3 @@
-#     zoo1 = Zoo()
-#     zoo1.agregarHabitat()
-#     print(zoo1.habitats[0].__dict__)
-
-#     Habitat1 = Habitat(1,2)
-#     Habitat1.agregarAnimal()
-#     print( .animales[0].__dict__)
 class Animal():
     def __init__(self, animal,especie,nombre):
         self.animal = animal
@@ -26,7 +19,7 @@ class Habitat():
 
     def verAnimal(self):
         for recorer in self.animales:
-            print (recorer.animal,recorer.extencion,recorer.nombre)
+            print ("Animal:", recorer.animal,'\nEspecie:', recorer.especie,"\nNombre:", recorer.nombre)
 
 
 class Zoo():
@@ -42,6 +35,7 @@ class Zoo():
     def verhabitat(self):
         for i in self.habitats:
             print('Nombre:',i.nombre,'\nExtencion:', i.extencion)
+
 
 zoo1 = Zoo()
 Habitat1 = Habitat(1,2)
@@ -66,7 +60,8 @@ while True:
     elif(eleccion == '3'):
         print('\n\t Datos del habitat \n')
         zoo1.verhabitat()
-    
+        Habitat1.verAnimal()  
+        
     elif(eleccion == '4'):
         print('\n\t Datos del animal \n')
         Habitat1.verAnimal()
