@@ -36,7 +36,6 @@ class Zoo():
         for i in self.habitats:
             print('Nombre:',i.nombre,'\nExtencion:', i.extencion)
 
-
 zoo1 = Zoo()
 Habitat1 = Habitat(1,2)
 
