@@ -36,6 +36,10 @@ class Zoo():
         for i in self.habitats:
             print('Nombre:',i.nombre,'\nExtencion:', i.extencion)
 
+    def eliminarHabitat(self):
+        del self.habitats[0]
+        self.habitats
+
 zoo1 = Zoo()
 Habitat1 = Habitat(1,2)
 
@@ -65,6 +69,9 @@ while True:
         print('\n\t Datos del animal \n')
         Habitat1.verAnimal()
 
+    elif(eleccion == '6'):
+        zoo1.eliminarHabitat()   
+         
     elif(eleccion == '5'):
         print('\n \t Gracias por su visita \n')
         break
