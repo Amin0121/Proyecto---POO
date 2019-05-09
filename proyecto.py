@@ -20,7 +20,10 @@ class Habitat():
     def verAnimal(self):
         for recorer in self.animales:
             print ("Animal:", recorer.animal,'\nEspecie:', recorer.especie,"\nNombre:", recorer.nombre)
-
+    
+    def eliminarAnimal(self):
+        del self.animales[0]
+        self.animales
 
 class Zoo():
     def __init__(self):
@@ -49,7 +52,10 @@ while True:
     '2. Crear Animal\n'
     '3. Ver el Habitat\n' 
     '4. Ver el Animal\n'
-    '5. Salir')  
+    '5. Eliminar Habitat\n'
+    '6. Eliminar Animal\n'
+    '7. Salir')
+
     eleccion = input('Seleccionar una opcion:')
 
     if (eleccion == '1'):
@@ -69,10 +75,15 @@ while True:
         print('\n\t Datos del animal \n')
         Habitat1.verAnimal()
 
-    elif(eleccion == '6'):
-        zoo1.eliminarHabitat()   
-         
     elif(eleccion == '5'):
+        print('\n\t Se ha eliminado el primer habitat')
+        zoo1.eliminarHabitat()
+
+    elif(eleccion == '6'):
+        print('\n\t Se ha eliminado el primer Amimal')
+        Habitat1.eliminarAnimal()  
+         
+    elif(eleccion == '7'):
         print('\n \t Gracias por su visita \n')
         break
     
